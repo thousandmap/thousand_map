@@ -1,6 +1,8 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+use think\Db;
+
 class IndexController extends Controller {
     public function index(){
         $Data=M('goods');
@@ -22,4 +24,23 @@ class IndexController extends Controller {
         $this->assign('result7',$result7);
         $this->display();
     }
+    public function detailsOne(){
+
+//        dump();exit;
+
+        $this->display('Admin/detailsOne');
+    }
+    public function detailsTwo(){
+
+        $this->display('Admin/detailsTwo');
+    }
+
+    public function detailsThree(){
+
+
+        $this->display('Admin/detailsThree');
+    }
+
+
+
 }
