@@ -2275,7 +2275,7 @@ $(document).ready(function () {
          style="background: url(&#39;http://pic.qiantucdn.com/58pic/27/92/34/33e58PICmCA.jpg!/fw/220/compress/true/clip/220x220a0a0/gravity/north&#39;) 100%;background-size:cover;"></div>
     <div class="w1200 clearfix">
         <foreach name="date" item="v">
-            <div class="fl cover-left"><img src="__PUBLIC__/images/{$v.pic}" width="220" height="220" alt=""></div>
+            <div class="fl cover-left"><img src="__PUBLIC__/images/{$v.picture}" width="220" height="220" alt=""></div>
             <div class="fl cover-right" style="width: 630px;height: 220px;">
                 <!--<p class="cover-des">千小橙的收藏夹，为您找到了电商·喜迎新春首页图片、电商·喜迎新春首页素材、电商·喜迎新春首页背景图、电商·喜迎新春首页海报、电商·喜迎新春首页设计等图片素材信息，并提供了电商·喜迎新春首页图片素材免费下载服务。</p>-->
                 <div class="clearfix cover-userinfo"><p class="cover-title">{$v.goodsname}</p>
@@ -2287,7 +2287,7 @@ $(document).ready(function () {
                                                               src="__PUBLIC__/images/ed8f38febb6ac9af8143bf108fba3c022"
                                                               width="32" height="32" alt="">{$v.author}</p></a></div>
                 <p class="cover-info"><span><i class="icon-eye"></i>76698</span><span><i class="icon-attention-num"></i>311</span><span><i
-                        class="icon-created-at"></i>2017-12-19 10:20:40</span></p></div>
+                        class="icon-created-at"></i>{$date[0]['addtime']|date="Y-m-d",###}</span></p></div>
         </foreach>
         <div class="fl cover-left" style="height: 220px;position: relative;"><p class="qt-btn btn-green-linear"
                                                                                 id="favor_attention_btn"><a
