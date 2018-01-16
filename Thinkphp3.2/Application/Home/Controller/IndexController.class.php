@@ -22,4 +22,22 @@ class IndexController extends Controller {
         $this->assign('result7',$result7);
         $this->display();
     }
+
+    public function Details(){
+        $id=$_GET['id'];
+        $arr=M('');
+        $date=$arr->query("select p.id,p.gid,g.cid,g.addtime,g.goodsname,p.goods_details,p.Picture,p.author,g.size,g.Suffix FROM figure_pic as p INNER JOIN figure_goods as g ON g.id=p.gid where p.gid=$id");
+//      dump($date);exit;
+        $this->assign('date',$date);
+        if($date[0]['cid']==1){
+            $this->display('Admin/detailsOne');
+        }else{
+            $this->display('Admin/details');
+        }
+
+
+
+    }
+
+
 }
