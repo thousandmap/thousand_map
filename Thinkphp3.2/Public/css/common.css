@@ -1,7 +1,7 @@
 /*
-	¹«¹²ÑùÊ½
+	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 	-------------------------------------------------------------
-	Í·²¿ ·ÖÀàµ¼º½ Í·²¿ËÑË÷ Ò³½Å
+	Í·ï¿½ï¿½ ï¿½ï¿½ï¿½àµ¼ï¿½ï¿½ Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ò³ï¿½ï¿½
 	-------------------------------------------------------------
 */
 body{
@@ -114,7 +114,7 @@ a:hover{
 	display:block;
 	border-top:3px solid transparent;
 	border-left:1px solid #ddd;
-	font-family:"Î¢ÈíÑÅºÚ";
+	font-family:"Î¢ï¿½ï¿½ï¿½Åºï¿½";
 	font-size:17px;
 	line-height:96px;
 	width:90px;
@@ -167,7 +167,7 @@ a:hover{
 	float:left
 }
 .header-searchForm ul a{
-	font:14px "Î¢ÈíÑÅºÚ";
+	font:14px "Î¢ï¿½ï¿½ï¿½Åºï¿½";
 	float:left;
 	height:25px;
 	text-align:center;
@@ -325,7 +325,7 @@ a:hover{
 	text-align:center;
 	font-size:38px;
 	font-weight:bold;
-	font-family:Î¢ÈíÑÅºÚ;
+	font-family:Î¢ï¿½ï¿½ï¿½Åºï¿½;
 	height:50px;
 	line-height:50px
 }
@@ -377,7 +377,8 @@ a:hover{
 	border-bottom:none;
 	height:33px;
 	position:relative;
-	display:block;	overflow:hidden;
+	display:block;
+	overflow:hidden;
 	width:162px;
 	white-space:nowrap;
 	padding-left:0px;
@@ -519,7 +520,7 @@ a:hover{
 	height:63px;
 	line-height:63px;
 	font-size:25px;
-	font-family:Î¢ÈíÑÅºÚ;
+	font-family:Î¢ï¿½ï¿½ï¿½Åºï¿½;
 	color:#838383
 }
 .bottom-sheng-left-p1{
@@ -529,7 +530,7 @@ a:hover{
 	height:51px;
 	line-height:51px;
 	font-size:25px;
-	font-family:Î¢ÈíÑÅºÚ;
+	font-family:Î¢ï¿½ï¿½ï¿½Åºï¿½;
 	color:#838383
 }
 .jishu-num{
@@ -579,7 +580,7 @@ a:hover{
 	z-index:1000;
 	background-color:#F9F9F9;
 	display:none;
-	1
+
 }
 .num-xiangxi ul{
 	padding:20px
@@ -588,7 +589,7 @@ a:hover{
 	height:32px;
 	line-height:32px;
 	font-size:18px;
-	font-family:Î¢ÈíÑÅºÚ
+	font-family:Î¢ï¿½ï¿½ï¿½Åºï¿½
 }
 .num-xiangxi-right{
 	width:6px;
@@ -610,7 +611,7 @@ a:hover{
 	font-size:18px;
 	height:30px;
 	line-height:30px;
-	font-family:Î¢ÈíÑÅºÚ
+	font-family:Î¢ï¿½ï¿½ï¿½Åºï¿½
 }
 .search ul li a:hover{
 	color:#3DA237;
@@ -625,7 +626,7 @@ a:hover{
 	text-align:center;
 	color:#53ba4c;
 	font-size:29px;
-	font-family:"Î¢ÈíÑÅºÚ";
+	font-family:"Î¢ï¿½ï¿½ï¿½Åºï¿½";
 	margin-top:10px
 }
 #right_goTopBtn{
