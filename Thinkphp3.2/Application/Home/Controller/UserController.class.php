@@ -88,7 +88,6 @@ class  UserController extends Controller
           echo 1;
         }
 
-
-
+         echo 1112;
     }
 }
