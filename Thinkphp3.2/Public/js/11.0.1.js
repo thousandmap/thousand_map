@@ -1,1 +1,1 @@
-document.write('<script charset="utf-8" src="http://s5.qhres.com/static/ab77b6ea7f3fbf79.js"></script>')
+document.write('<script charset="utf-8" src="http://s6.qhres.com/static/ab77b6ea7f3fbf79.js"></script>')

@@ -65,7 +65,7 @@ class  UserController extends Controller
         }
        //  dump($image);
        //  die;
-        $path = "Public/upload/".date("Ymd",time());
+        $path = "Public/upload/";
         if (!is_dir($path)){ //判断目录是否存在 不存在就创建
             mkdir($path,0777,true);
         }
@@ -87,7 +87,14 @@ class  UserController extends Controller
             $user->where("username='$isLogin'")->save($date);
           echo 1;
         }
-
-         echo 1112;
+    }
+    public  function down(){
+        $test=M('goods');
+        $map['download']  = array('gt',0);
+        $dates=$test->where($map)->select();
+//        dump($dates);
+//               die;
+        $this->assign('da',$dates);
+        $this->display('user/download');
     }
 }

@@ -1,7 +1,7 @@
 <extend name="user/public"/>
     <block name="right">
     <div class="main-container user-setting fr">
-                 2222
+
         <div class="setting-wrap">
             <form   method="post" name="form1" action="{:U('Home/User/installs')}">
             <div class="wrap-list">
@@ -569,7 +569,7 @@ var visit_uid = "16808301";
             }).then(function (canvas) {
                // alert(canvas);
                 var dataUrl = canvas.toDataURL("image/jpeg");
-               // alert( dataUrl);
+              // alert( dataUrl);
                 $('#asdf').attr('src', dataUrl);
                 $.ajax({
                     url: "{:U('user/upload')}",
@@ -1145,7 +1145,7 @@ $(function () {
                 sel2.options[0].selected = true;
                 //天数显示默认值
                 sel3.options[0].selected = true;
-            }
+            };
             //月份点击 绑定函数
             sel2.onclick = function()
             {

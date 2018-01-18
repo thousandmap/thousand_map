@@ -30,7 +30,6 @@
 </head>
 
 <body>
-1111111111
 
 <style>/*
     note: 鍘熷ご閮ㄥ紩鐢╟ss
@@ -2086,17 +2085,21 @@ li {
 $user=M('user');
 $isLogin = session('admin');
 $pic =$user->where("username='$isLogin'")->getField('pic');
+$users=M('admin');
+$isLogin = session('admin');
+$date= $users->where("adminname='$isLogin'")->getField('created_at');
+$dates=date("Y-m-d",$date);
 ?>
 <div class="user-myself-bg" style="background-color: #add8e6;">
     <div class="w1200 user-header clearfix">
         <div class="user-box fl">
-            <div class="user-img"><img src="__PUBLIC__/upload/20180115/{$pic}" width="86" height="86"></div>
+            <div class="user-img"><img src="__PUBLIC__/upload/{$pic}" width="86" height="86"></div>
         </div>
         <div class="user-resume fl"><p class="user-id">ID: 37615632</p>
 
             <p class="user-name">{$_SESSION['admin']}<span class="vip-info"></span></p>
 
-            <p><span><i class="icon-secrecy"></i>保密</span><span><i class="icon-time"></i>注册于2017/12/14</span><span
+            <p><span><i class="icon-secrecy"></i>保密</span><span><i class="icon-time"></i>注册于{$dates}</span><span
                 class="perf-info"><a href="http://www.58pic.com/index.php?m=user&amp;a=accountSet">完善信息</a>可获取大量曝光
                     </span></p></div>
         <div class="user-info fr"><a href="http://www.58pic.com/index.php?m=user&amp;a=home&amp;type=gz"><p>
@@ -2112,7 +2115,7 @@ $pic =$user->where("username='$isLogin'")->getField('pic');
         <li><a href="">  &nbsp;&nbsp;我的主页</a></li>
         <li><a href="{:U('user/collect')}">  &nbsp;&nbsp;我的收藏</a></li>
         <li><a href="{:U('user/resumes')}">  &nbsp;&nbsp;我的云简历</a></li>
-        <li><a href="">  &nbsp;&nbsp;我的下载</a></li>
+        <li><a href="{:U('user/download')}">  &nbsp;&nbsp;我的下载</a></li>
         <li><a href="{:U('user/member')}">  &nbsp;&nbsp;我的VIP</a></li>
         <li><a href="http://www.58pic.com/invite/">&nbsp;&nbsp;企业VIP</a></li>
         <li><a href="{:U('user/install')}">

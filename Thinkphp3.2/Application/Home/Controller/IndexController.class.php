@@ -11,6 +11,7 @@ class IndexController extends Controller {
         $result5=$Data->limit(28,36)->select();
         $result6=$Data->limit(36,44)->select();
         $result7=$Data->limit(44,52)->select();
+        $result8=$Data->limit(52,60)->select();
 //        var_dump($result2);
 //        die;
         $this->assign('result',$result);
@@ -20,6 +21,7 @@ class IndexController extends Controller {
         $this->assign('result5',$result5);
         $this->assign('result6',$result6);
         $this->assign('result7',$result7);
+        $this->assign('result8',$result8);
         $this->display();
     }
 
@@ -35,9 +37,52 @@ class IndexController extends Controller {
             $this->display('Admin/details');
         }
 
+    }
 
+
+    public function Resume (){
+        $User=M();
+        $name="zhang";
+        if($name==null){
+            echo "<script>alert('请先去登录哦,亲！')</script>";
+            $this->display('Login/Login');
+        }else{
+            $arr=$User->query("SELECT u.id,u.username,r.sex,r.city,r.sel1,sel2,location_p,location_c,education,r.phone,r.email FROM figure_user as u INNER JOIN figure_resume as r ON r.uid=u.id where u.username='$name'");
+//          var_dump($arr);exit;
+            $this->assign('arr',$arr);
+            $this->display('Resume/resume');
+        }
 
     }
+
+    public function Resume_list (){
+
+        $this->display('Resume/resume_list');
+
+    }
+
+    public function edit(){
+        if($_POST){
+            $id=$_POST['id'];
+            $User=M();
+            $aar=$User->query("SELECT u.id,u.username,r.sex,r.city,r.sel1,sel2,location_p,location_c,education,r.phone,r.email FROM figure_user as u INNER JOIN figure_resume as r ON r.uid=u.id where u.id='$id'");
+//           var_dump($aar);exit;
+            $this->assign('aar',$aar);
+            $this->display('Resume/Edit_information');
+        }
+    }
+
+    public function edit_two(){
+//        var_dump($_POST['id']);exit;
+        if($_POST){
+            $id=$_POST['id'];
+            $User=M();
+            $aar=$User->query("SELECT u.id,u.username,r.sex,r.city,r.sel1,sel2,location_p,location_c,education,r.phone,r.email FROM figure_user as u INNER JOIN figure_resume as r ON r.uid=u.id where u.id='$id'");
+//           var_dump($aar);exit;
+            $this->assign('aar',$aar);
+            $this->display('Resume/intention');
+        }
+        }
 
 
 }
