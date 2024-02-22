@@ -1108,4 +1108,27 @@ $(function(){
         }
     })
 
+    // 添加勾选协议图标与文案 ( 零时添加方案 )
+    $('.sp-agreement-handle').click(function () {
+        $('body').append('<div class="agreement-handle-message" style=" font-size: 14px;\n' +
+            'display: none;' +
+            'line-height: 1.5;\n' +
+            'padding: 20px 30px;' +
+            'border-radius: 4px;' +
+            '-webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' +
+            'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' +
+            'background: #fff;' +
+            'color: rgba(0, 0, 0, 0.65);\n' +
+            'list-style: none;\n' +
+            'position: fixed;\n' +
+            'z-index: 1010;\n' +
+            'margin-left: -100px;' +
+            'top: 16px;\n' +
+            'left: 50%;"><img src="http://icon.qiantucdn.com/images/warning-icon.png" style="display: inline-block;vertical-align: middle;margin-right: 15px">充值必须同意改协议</div>');
+        $('.agreement-handle-message').fadeIn();
+        setTimeout(function () {
+            $('.agreement-handle-message').fadeOut();
+            $('.agreement-handle-message').remove()
+        }, 3000)
+    })
 })
